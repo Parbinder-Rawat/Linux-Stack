@@ -23,6 +23,8 @@ EXAMPLES:
 
 # create bootable USB’s -
 	dd if=/home/$user/bootimage.img of=/dev/sdc
+	
+	https://www.cyberciti.biz/faq/creating-a-bootable-ubuntu-usb-stick-on-a-debian-linux/
 
 # Use gzip or bzip2 to compress when creating image -
 	dd if =/dev/sda2 | bzip2 hdadisk.img.bz2
