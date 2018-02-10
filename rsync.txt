@@ -1,0 +1,12 @@
+#######**** rsync ****#################
+
+$ rsync -a -r -v -P -z -u src_file_path dst_file_path
+	Where,
+		-a >>> all permissions/ownership intact
+		-r >>> recursivly sync from nest of folders
+		-v >>> Verbose of the command execution.
+		-P >>> Partial progress of the command.
+		-z >>> compress the file for transfer as bandwith saves.
+Source link:- https://www.linux.com/learn/how-backup-files-linux-rsync-command-line
+
+

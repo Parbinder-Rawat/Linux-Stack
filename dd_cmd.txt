@@ -1,0 +1,51 @@
+## dd (data duplicator) ##
+
+source: https://www.linuxnix.com/what-you-should-know-about-linux-dd-command/
+
+Syntax:
+	dd if=<source file name> of=<target file name> [Options]
+Where,
+	if=<source> –‘if’ stands for input-file.
+	of=<destination> –‘of’ stands for output-file.
+
+	[options] –These options include, how fast data should be written, what format etc.
+
+EXAMPLES:
+
+# Clone one hard disk to another hard disk -
+	dd if=/dev/sda of=/dev/sdb
+
+# Backing up a partition to a file(as hdadisk.img)
+	dd if =/dev/sda2 of=~/hdadisk.img
+
+# Restoring this image file in to other machine -
+	dd if=hdadisk.img of=/dev/sdb3
+
+# create bootable USB’s -
+	dd if=/home/$user/bootimage.img of=/dev/sdc
+
+# Use gzip or bzip2 to compress when creating image -
+	dd if =/dev/sda2 | bzip2 hdadisk.img.bz2
+
+# create ISO files from a CD-ROM or DVD-ROM -
+	dd if=/dev/dvd of=/opt/my_linux_image.iso
+   or,
+	dd if=/dev/sr0 of=/home/$user/mycd_image.iso bs=2048 conv=sync
+   or,
+	dd if=/dev/sda1 of=/dev/sdb1 bs=4096 conv=noerror,sync
+
+#  if you don’t have cp command use dd command to copy a file -
+	dd if=/home/imran/abc.txt of=/mnt/abc.txt
+
+# Wipe/delete content of a disk so that it will be empty for some one to use it -
+	dd if=/dev/zero of=/dev/sdb
+
+# create virtual file system with dd command which can be used as swap -
+	dd if=/dev/zero of=/swapfile bs=1024 count=200000
+
+#  What to hide your ass by deleting your personal data. Many people think if we do rm -rf /<your data> will do the needful. But we can recover those deletion by using disk recovery tools like Photorec or some forensic tools. But if you want some not to recover your data you have to write random data on your partition where you data resides.
+	dd if=/dev/random of=/dev/sdb
+
+Do above command multiple times so that it is real hard to recover data. 
+
+
