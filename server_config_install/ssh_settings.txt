@@ -1,0 +1,20 @@
+#########  Secure SSH with below modification ####
+
+1. Edit following /etc/ssh/sshd_config:
+	- Permitrootlogin yes/no
+	- PubkeyAuthentication yes
+	- PasswordAuthentication yes
+	- X11Forwarding yes/no
+	- ClientAliveInterval 0
+	- ClientAliveCountMax 3
+
+2. Change ssh port:
+	For changing the port of ssh, we need to allow the port using SELinux using:-
+		- semanage port -l | grep ssh
+			[ssh_port_t                     tcp      22]
+		- semanage port -a -t ssh_port_t -p tcp 2280
+		- semanage port -l | grep ssh
+			[ssh_port_t                     tcp      2220, 22]
+
+
+
