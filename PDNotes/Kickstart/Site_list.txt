@@ -1,0 +1,29 @@
+
+***** Pxe Install through FTP *********
+
+
+http://www.tecmint.com/install-pxe-network-boot-server-in-centos-7/
+
+For Dracut or '/dev/root does not exist' error, replace 'method' with 'inst.repo' in pxelinux.cfg/default file as -
+
+append initrd=centos7/initrd.img method=ftp://192.168.0.111/pub/centos7 devfs=nomount
+
+to 
+
+append initrd=centos7/initrd.img inst.repo=ftp://192.168.0.111/pub/centos7 devfs=nomount
+
+Source:https://blog.vladionescu.com/pxe-installing-rhel-7-from-cobbler-2-6/
+
+
+**** Kickstart using PXE-Network Boot **********
+
+http://www.linux-mag.com/id/6747/
+
+**** Kickstart using NFS/Web Server Good guide with videos:********
+
+http://landoflinux.com/linux_kickstart_introduction.html
+
+Others: 
+
+http://how-to.linuxcareer.com/automating-linux-installations-with-kickstart
+http://www.tomsitpro.com/articles/kickstart-linux-automation,2-798.html

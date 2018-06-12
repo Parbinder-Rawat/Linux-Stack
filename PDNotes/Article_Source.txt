@@ -1,0 +1,18 @@
+
+SysAdmin Tutorials:	https://www.blackmoreops.com/administration/
+			https://www.digitalocean.com
+			http://www.thegeekstuff.com
+			https://www.cyberciti.biz/tips/category/sys-admin
+
+
+SYsAdmin best Tools:	https://www.blackmoreops.com/administration//2011/12/linux-performance-monitoring-tools/
+
+Logs In Linux:		https://www.digitalocean.com/community/tutorials/how-to-view-and-configure-linux-logs-on-ubuntu-and-centos
+
+SAR tool:		https://www.blackmoreops.com/2014/06/18/sysstat-sar-examples-usage/
+	  		http://www.slashroot.in/examples-using-sar-command-system-monitoring-linux
+
+Cron Jobs:		http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
+
+Synergy(Ubuntu):	http://www.thegeekstuff.com/2014/03/synergy-share-keyboard-mouse/
+
